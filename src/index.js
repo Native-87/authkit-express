@@ -18,11 +18,8 @@ app.use(express.urlencoded({ extended: true }));
 const swaggerOptions = {
   definition: {
     openapi: '3.0.0',
-    info: {
-      title: 'AuthKit Express API',
-      version: '1.0.0',
-      description: 'Production-ready JWT auth & role-based access boilerplate',
-    },
+    info: { title: 'AuthKit Express API', version: '1.0.0', description: 'JWT auth & role-based access boilerplate' },
+servers: [{ url: 'https://authkit-express-production.up.railway.app' }],
     components: {
       securitySchemes: {
         bearerAuth: {
